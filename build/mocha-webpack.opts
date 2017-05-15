@@ -1,0 +1,3 @@
+--colors
+--webpack-config build/webpack.config.babel.js
+test/specs/Test-test.js

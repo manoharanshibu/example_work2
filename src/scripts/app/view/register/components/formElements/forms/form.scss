@@ -1,0 +1,20 @@
+@import "mixins";
+
+[class*='--large-detail'] {
+
+  label {
+    @include font-size(16px);
+  }
+
+  [class*='form-section'] {
+    [class*='input-icon'] {
+      top: 12px;
+
+    }
+  }
+
+  .g-input-field--text{
+    height: 46px;
+    @include font-size(16px);
+  }
+}

@@ -1,0 +1,4 @@
+/*******************************************************************************
+ * Copyright (c) 2013-2014 Ilixium. All rights reserved.
+ *******************************************************************************/
+@CHARSET "ISO-8859-1";.ilixium-blanket{position:fixed;width:100%;height:100%;top:0;left:0;zoom:1;filter:alpha(opacity=50);opacity:.5;background-color:#000;z-index:1000;}.ilixium-iframe-form{display:none;}.ilixium-iframe{position:absolute;top:0;left:0;background:transparent;border:none;width:100%;height:100%;z-index:1001;}@media(max-width :767px){.ilixium-iframe{margin-left:0;margin-top:0;min-height:600px;position:absolute;}}@media(max-width :330px){.ilixium-iframe{min-height:480px;}}
