@@ -1,0 +1,55 @@
+{
+	"settings": {
+		"namespace": "carousel",
+		"component": "carousel/CarouselWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Carousel",
+		"description": "Displays a slider with all the selected promotions that are active.",
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "configurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [3],
+						"default": 3
+					},
+					"tabs": {
+						"title": "Tabs",
+						"type": "string",
+						"notes": "Tabs to provide navigation to the slides",
+						"enumNames": [ "(none)", "simple" ],
+						"enum": [ "none", "simple" ]
+					}
+				},
+				"required": ["tilespan", "tabs"]
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {
+					"slides": {
+						"title": "Promotions",
+						"x-hints": {
+							"form": {
+								"inputComponent": "carouselSelector"
+							}
+						}
+					},
+					"multiple": {
+						"title": "Multiple Slides Per Row",
+						"type": "boolean",
+						"default": false
+					}
+				},
+				"required": ["slides"]
+			}
+		}
+	}
+}

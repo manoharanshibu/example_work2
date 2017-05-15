@@ -1,0 +1,66 @@
+{
+	"settings": {
+		"namespace": "leagueSchedule",
+		"component": "leagueSchedule/LeagueScheduleWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "League Schedule",
+		"description": "Displays Events from a path by date",
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "conifgurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [2,3],
+						"default": 3
+					},
+					"title": {
+						"title": "Title",
+						"type": "string",
+						"notes": "title to display on widget",
+						"default": "League Schedule"
+					},
+					"subTitle": {
+						"title": "Subtitle",
+						"type": "string",
+						"notes": "title to display on widget"
+					}
+				},
+				"required": ["tilespan"]
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {
+					"path": {
+						"title": "paths",
+						"x-hints": { "form": { "inputComponent": "builderMultiplePathSelector" }}
+					},
+				  "eventType": {
+					"title": "Event type",
+					"type": "string",
+					"enumNames": [
+					  "All",
+					  "Normal Events",
+					  "Outrights"
+					],
+					"enum": ["all", "normal", "outrights"]
+				  },
+					"outrightsTitle": {
+						"title": "Outrights Title",
+						"type": "boolean",
+						"notes": "Adds the parent market of the outright as a title of the group",
+						"default": true
+					}
+				},
+				"required": ["path"]
+			}
+		}
+	}
+}

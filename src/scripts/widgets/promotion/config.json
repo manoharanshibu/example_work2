@@ -1,0 +1,31 @@
+{
+	"settings": {
+		"namespace": "promotion",
+		"component": "promotion/PromotionWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Promotion",
+		"description": "Displays a configured Promotion",
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "configurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [1, 3],
+						"default": 1
+					}
+				},
+				"required": ["tilespan"]
+			},
+			"data": {
+				"x-hints": { "form": { "inputComponent": "promoSelector" } }
+			}
+		}
+	}
+}

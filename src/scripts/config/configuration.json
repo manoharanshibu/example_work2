@@ -1,0 +1,70 @@
+{
+  "client": "bob",
+  "application": "sb-backoffice",
+  "title": "Bob Backoffice",
+  "apiVersion": "2",
+  "channel": "INTERNET",
+
+  "env": {
+	"Env": "LOCAL",
+	"Product": "BACKOFFICE",
+	"Version": "@VERSION@",
+	"Customer": "bob"
+  },
+
+  "endpoints": {
+	"domain": {
+	  "url": "https://trading-bob-dev.amelco.co.uk",
+	  "endpoints": {
+		"api": "sportsbook/v1/api",
+		"backoffice": "backoffice/rest",
+		"trader": "ats-trader/api",
+		"document": "kyc/rest/documents",
+		"payment": "payment/rest",
+		"sso": "singleSignOnLogin"
+	  }
+	},
+	"node": {
+	  "url": "https://trading-bob-dev.amelco.co.uk",
+	  "endpoints": {
+		"nodepath": "ats-node"
+	  }
+	},
+	"cdn": {
+	  "url": "https://cdn.amelco.co.uk",
+	  "endpoints": {
+		"i18n": "mybet/i18n"
+	  }
+	},
+	"punter": {
+	  "url": "https://sportsbook-bob-dev.amelco.co.uk",
+	  "endpoints": {}
+	},
+	"s3": {
+	  "url": "https://s3-eu-west-1.amazonaws.com",
+	  "endpoints": {
+		"bucketName": "betonbrazil-devuat/images"
+	  }
+	},
+	"agent": {
+	  "url": "https://baba-uat.amelco.co.uk",
+	  "endpoints": {
+		"agentDomain": "agent/#payment"
+	  }
+	},
+	"mtn": {
+	  "url": "https://baba-uat.amelco.co.uk",
+	  "endpoints": {
+		"mtnDomain": "baba-mtn/#customer-support/transactions"
+	  }
+	}
+  }
+}
+
+
+
+
+
+
+
+

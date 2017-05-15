@@ -1,0 +1,49 @@
+{
+	"settings": {
+		"namespace": "dstWidget",
+		"component": "dstWidget/DSTWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Digital Sports Tech",
+		"description": "Displays the DST iframe",
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "configurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [1,2,3],
+						"default": 3
+					},
+					"title": {
+						"title": "Title",
+						"type": "string",
+						"notes": "title to display on widget",
+						"default": ""
+					}
+				},
+				"required": ["tilespan"]
+			},
+			"data": {
+			  "type": "object",
+			  "notes": "input data required by specific modules to define how they should operate.",
+			  "properties": {
+				"league": {
+				  "title": "Selected League",
+				  "type": "number",
+				  "notes": "Optional selected tab. (The first one will be selected by default)",
+				  "enumNames": ["EPL", "LALIGA", "SERIEA", "NBA" , "NFL", "AFL", "UCL"],
+				  "enum": [146, 149, 150, 123, 142, 144, 151]
+				}
+			  },
+			"required": []
+		  }
+		}
+	}
+}
+

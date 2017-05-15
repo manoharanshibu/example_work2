@@ -1,0 +1,43 @@
+{
+	"settings": {
+		"namespace": "videoPlayer",
+		"component": "videoPlayer/VideoPlayerWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Video Player Widget",
+		"description": "Playing a variety of URLs, including file paths, YouTube, SoundCloud and Vimeo",
+		"required": ["defaults", "data"],
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "conifgurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [1],
+						"default": 1
+					},
+					"title": {
+						"title": "Title",
+						"type": "string",
+						"notes": "title to display on widget"
+					},
+					"url": {
+						"title": "Url",
+						"type": "string"
+					}
+				}
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {},
+				"required": []
+			}
+		}
+	}
+}

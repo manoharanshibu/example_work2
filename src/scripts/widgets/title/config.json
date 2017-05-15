@@ -1,0 +1,46 @@
+{
+	"settings": {
+		"namespace": "title",
+		"component": "title/titleWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Title Widget",
+		"description": "Used to add a title to any page",
+		"required": ["defaults", "data"],
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "conifgurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [3,4],
+						"default": 3
+					},
+					"title": {
+						"title": "Title",
+						"type": "string",
+						"notes": "title to display on widget"
+					},
+					"tag": {
+						"title": "Heading tag",
+						"type": "number",
+						"notes": "defines the header tag",
+						"enum": [1,2,3,4,5,6],
+						"default": 1
+					}
+				}
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {},
+				"required": []
+			}
+		}
+	}
+}

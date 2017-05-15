@@ -1,0 +1,46 @@
+{
+	"settings": {
+		"namespace": "bettingKings",
+		"component": "bettingKings/BettingKingsWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Betting Kings",
+		"description": "Displays coming up events for a given sport/sports",
+		"required": ["defaults", "data"],
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "conifgurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [1],
+						"default": 1
+					},
+					"title": {
+						"title": "Betting Kings Tile",
+						"type": "string",
+						"notes": "title to display on widget",
+						"default": "Betting King"
+					},
+					"subTitle": {
+						"title": "Subtitle",
+						"type": "string",
+						"notes": "title to display on widget"
+					}
+				},
+				"required": ["tilespan"]
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {},
+				"required": []
+			}
+		}
+	}
+}

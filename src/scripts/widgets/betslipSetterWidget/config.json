@@ -1,0 +1,46 @@
+{
+	"settings": {
+		"namespace": "betslipSetterWidget",
+		"component": "betslipSetterWidget/BetslipSetterWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Betslip Setter",
+		"description": "Adds the selected selections to the betslip on page load",
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "configurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [1,2,3],
+						"default": 3
+					}
+				},
+				"required": ["tilespan"]
+			},
+		  "data": {
+			"type": "object",
+			"notes": "input data required by specific modules to define how they should operate.",
+			"properties": {
+			  "selections": {
+				"title": "selections",
+				"x-hints": { "form": { "inputComponent": "builderSelectionSelector" }}
+			  },
+			  "redirect": {
+				"title": "Redirect to the home page",
+				"type": "boolean",
+				"notes": "if selected it redirects to the home page after the Betslip changed",
+				"default": true
+			  }
+			},
+			"required": ["path"]
+		  }
+		}
+	}
+}
+

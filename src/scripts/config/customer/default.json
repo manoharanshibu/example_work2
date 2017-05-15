@@ -1,0 +1,237 @@
+{
+  "locales": {
+	"en": {
+	  "formats": {
+		"number": {
+		  "price": {
+			"style": "currency",
+			"currency": "GBP",
+			"minimumFractionDigits": 2
+		  }
+		}
+	  }
+	},
+	"de": {
+	  "formats": {
+		"number": {
+		  "price": {
+			"style": "currency",
+			"currency": "EUR",
+			"minimumFractionDigits": 2
+		  }
+		}
+	  }
+	}
+  },
+  "defaultTranslationsLang": "en",
+  "useSecure": "true",
+  "apiKeepAlive": "10000",
+  "apiReconnect": "20000",
+  "socketEnabled": false,
+  "socketKeepAlive": "10000",
+  "socketReconnect": "20000",
+  "singleSignOn": false,
+  "userGroupSettings": true,
+  "autoLogin": true,
+  "tabs": [
+	{
+	  "route": "search",
+	  "enabled": true,
+	  "title": "Account search",
+	  "icon": "fa fa-search"
+	},
+	{
+	  "route": "transactions",
+	  "enabled": true,
+	  "title": "Payments",
+	  "icon": "fa fa-credit-card",
+	  "tabs": [
+		{
+		  "payments": "View Transactions"
+		}
+	  ]
+	},
+	{
+	  "route": "agent",
+	  "enabled": false,
+	  "title": "agent",
+	  "icon": "pe-is-hs-browser-edit",
+	  "tabs": [
+		{
+		  "overview": "Overview"
+		},
+		{
+		  "create": "Creation"
+		},
+		{
+		  "manage": "Management"
+		},
+		{
+		  "bets": "Bets"
+		}
+	  ]
+	},
+	{
+	  "route": "cms",
+	  "enabled": true,
+	  "title": "CMS",
+	  "icon": "fa fa-th",
+	  "tabs": [
+		{
+		  "sport": "Sport Matrix"
+		},
+		{
+		  "highlights": "highlights"
+		},
+		{
+		  "promotions": "Promotions"
+		},
+		{
+		  "modules": "Page Builder"
+		},
+		{
+		  "rules": "Game Rules"
+		}
+	  ]
+	},
+	{
+	  "route": "translate",
+	  "enabled": true,
+	  "title": "Translations",
+	  "icon": "fa fa-language",
+	  "tabs": [
+		{
+		  "external": "External"
+		},
+		{
+		  "markets": "Markets"
+		},
+		{
+		  "selections": "Selections"
+		},
+		{
+		  "countries": "Countries"
+		}
+	  ]
+	},
+	{
+	  "route": "segment",
+	  "enabled": true,
+	  "title": "segment",
+	  "icon": "fa fa-globe",
+	  "tabs": [
+		{
+		  "account": "Account Segments"
+		},
+		{
+		  "regional": "Regional Segments"
+		},
+		{
+		  "settings": "Sportsbook Settings"
+		}
+	  ]
+	},
+	{
+	  "route": "bonus",
+	  "enabled": true,
+	  "title": "Bonus Engine",
+	  "icon": "fa fa-trophy",
+	  "tabs": [
+		{
+		  "manage": "Campaign Manager"
+		},
+		{
+		  "creation": "Campaign Creation"
+		},
+		{
+		  "templates": "Campaign Templates"
+		}
+	  ]
+	},
+	{
+	  "route": "admin",
+	  "enabled": true,
+	  "title": "Admin",
+	  "icon": "fa fa-check-circle",
+	  "tabs": [
+		{
+		  "adminTicker": "Admin Ticker"
+		},
+		{
+		  "internalUsers": "Internal Users"
+		}
+	  ]
+	},
+	{
+	  "route": "settingsTemplate",
+	  "enabled": false,
+	  "title": "Settings Template",
+	  "icon": "fa fa-briefcase"
+	}
+  ],
+  "accountTabs": [
+	{
+	  "route": "account",
+	  "title": "account",
+	  "icon": "pe-is-hs-browser-home",
+	  "tabs": [
+		{
+		  "route": "details",
+		  "title": "Personal Details",
+		  "icon": "fa fa-user"
+		},
+		{
+		  "route": "protection",
+		  "title": "Limitation",
+		  "icon": "fa fa-shield"
+		},
+		{
+		  "route": "statistics",
+		  "title": "Betting Statistics",
+		  "icon": "fa fa-bar-chart"
+		},
+		{
+		  "route": "audit",
+		  "title": "Audit Logs and Messages",
+		  "icon": "fa fa-balance-scale",
+		  "alternativeRoutes": [
+			"traderComments"
+		  ]
+		},
+		{
+		  "route": "documents",
+		  "title": "Uploaded Documents",
+		  "icon": "fa fa-file-text-o"
+		},
+		{
+		  "route": "history",
+		  "title": "Bet History",
+		  "icon": "fa fa-list"
+		},
+		{
+		  "route": "transactions",
+		  "title": "Transactions",
+		  "icon": "fa fa-credit-card"
+		},
+		{
+		  "route": "bonus",
+		  "title": "Customer Bonus",
+		  "icon": "fa fa-trophy"
+		},
+		{
+		  "route": "cards",
+		  "title": "Stored Cards",
+		  "icon": "fa fa-credit-card"
+		}
+	  ]
+	}
+  ]
+}
+
+
+
+
+
+
+
+

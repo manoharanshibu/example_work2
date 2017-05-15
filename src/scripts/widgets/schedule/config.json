@@ -1,0 +1,46 @@
+{
+	"settings": {
+		"namespace": "schedule",
+		"component": "schedule/ScheduleWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Sport Schedule",
+		"description": "Displays Schedule",
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "configurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [3],
+						"default": 3
+					},
+					"title": {
+						"title": "Title",
+						"type": "string",
+						"notes": "title to display on widget",
+						"default": "Scoreboard"
+					},
+					"subTitle": {
+						"title": "Subtitle",
+						"type": "string",
+						"notes": "title to display on widget"
+					}
+				},
+				"required": ["tilespan"]
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {
+				},
+				"required": []
+			}
+		}
+	}
+}

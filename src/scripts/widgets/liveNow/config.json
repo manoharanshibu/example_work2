@@ -1,0 +1,133 @@
+{
+	"settings": {
+		"namespace": "liveNow",
+		"component": "liveNow/LiveNowWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Live Now",
+		"description": "Displays Live Now",
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "conifgurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [2,3],
+						"default": 3
+					},
+					"title": {
+						"title": "Title",
+						"type": "string",
+						"notes": "title to display on widget",
+						"default": "Live Now"
+					},
+					"subTitle": {
+						"title": "Subtitle",
+						"type": "string",
+						"notes": "title to display on widget"
+					}
+				},
+				"required": ["tilespan"]
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {
+					"sport": {
+						"title": "Sport",
+						"type": "string",
+						"notes": "Optional sport to bind widget to.  normally takes sport from current route",
+						"enumNames": [
+							"American Football",
+							"Athletics",
+							"Aussie rules",
+							"Badminton",
+							"Baseball",
+							"Basketball",
+							"Beach Soccer",
+							"Beach Volley",
+							"Bowls",
+							"Boxing",
+							"Cricket",
+							"Cycling",
+							"Darts",
+							"F1",
+							"Field Hockey",
+							"Floorball",
+							"Football",
+							"Futsal",
+							"Golf",
+							"Greyhounds",
+							"Handball",
+							"Horses",
+							"Ice Hockey",
+							"Motor Bikes",
+							"Nascar",
+							"Olympics",
+							"Pesapallo",
+							"Rally",
+							"Rugby League",
+							"Rugby Union",
+							"Snooker",
+							"Speedway",
+							"Squash",
+							"Swimming",
+							"Table Tennis",
+							"Tennis",
+							"Volleyball",
+							"Waterpolo"
+						],
+						"enum": [
+							"AMERICAN_FOOTBALL",
+							"ATHLETICS",
+							"AUSSIE_RULES",
+							"BADMINTON",
+							"BASEBALL",
+							"BASKETBALL",
+							"BEACH_SOCCER",
+							"BEACH_VOLLEY",
+							"BOWLS",
+							"BOXING",
+							"CRICKET",
+							"CYCLING",
+							"DARTS",
+							"F1",
+							"FIELD_HOCKEY",
+							"FLOORBALL",
+							"SOCCER",
+							"FUTSAL",
+							"GOLF",
+							"GREYHOUNDS",
+							"HANDBALL",
+							"HORSE_RACING",
+							"ICE_HOCKEY",
+							"MOTOR_SPORTS",
+							"NASCAR",
+							"OLYMPICS",
+							"PESAPALLO",
+							"RALLY",
+							"RUGBY_LEAGUE",
+							"RUGBY_UNION",
+							"SNOOKER",
+							"SPEEDWAY",
+							"SQUASH",
+							"SWIMMING",
+							"TABLE_TENNIS",
+							"TENNIS",
+							"VOLLEYBALL",
+							"WATERPOLO"
+						]
+					}
+				},
+				"required": []
+			}
+		}
+	}
+}
+
+

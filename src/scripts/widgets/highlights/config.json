@@ -1,0 +1,102 @@
+{
+	"settings": {
+		"namespace": "highlights",
+		"component": "highlights/HighlightsWidget"
+	},
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"title": "Highlights",
+		"description": "Displays Event highlights for a given sport",
+		"required": ["defaults", "data"],
+		"type": "object",
+		"properties": {
+			"defaults": {
+				"type": "object",
+				"notes": "conifgurable generic base widget options.  can be tailored in cms",
+				"properties": {
+					"tilespan": {
+						"title": "Tilespan",
+						"type": "number",
+						"notes": "defines the number of fixed single tile widths the widget should span",
+						"enum": [3],
+						"default": 3
+					},
+					"title": {
+						"title": "Title",
+						"type": "string",
+						"notes": "title to display on widget",
+						"default": "Highlights"
+					},
+					"subTitle": {
+						"title": "Subtitle",
+						"type": "string",
+						"notes": "title to display on widget"
+					}
+				},
+				"required": ["tilespan"]
+			},
+			"data": {
+				"type": "object",
+				"notes": "input data required by specific modules to define how they should operate.",
+				"properties": {
+					"sport": {
+						"title": "Sport override",
+						"type": "string",
+						"notes": "Optional sport to bind widget to.  normally takes sport from current route",
+						"enumNames": [
+							"None",
+							"American Football",
+							"Basketball",
+							"Beach Volleyball",
+							"Boxing",
+							"Cricket",
+							"Cycling",
+							"Darts",
+							"Futsal",
+							"F1",
+							"Golf",
+							"Greyhounds",
+							"Handball",
+							"Horse Racing",
+							"Ice Hockey",
+							"Motor sports",
+							"Rugby League",
+							"Rugby Union",
+							"Snooker",
+							"Football",
+							"Tennis",
+							"Volleyball"
+						],
+						"enum": [
+							"NONE",
+							"AMERICAN_FOOTBALL",
+							"BASKETBALL",
+							"BEACH_VOLLEY",
+							"BOXING",
+							"CRICKET",
+							"CYCLING",
+							"DARTS",
+							"FUTSAL",
+							"F1",
+							"GOLF",
+							"GREYHOUNDS",
+							"HANDBALL",
+							"HORSE_RACING",
+							"ICE_HOCKEY",
+							"MOTOR_SPORTS",
+							"RUGBY_LEAGUE",
+							"RUGBY_UNION",
+							"SNOOKER",
+							"SOCCER",
+							"TENNIS",
+							"VOLLEYBALL"
+						]
+					}
+				},
+				"required": []
+			}
+		}
+	}
+}
+
+
